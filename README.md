@@ -1,5 +1,15 @@
 # Measure InnerSource tool
 
+> [!IMPORTANT]
+> This repository has moved from `github/measure-innersource` to `github-community-projects/measure-innersource`.
+> Please update your git remote:
+>
+> ```shell
+> git remote set-url origin git@github.com:github-community-projects/measure-innersource.git
+> ```
+>
+> Note: replace `origin` with the name of your remote if it's different.
+
 This tool measures InnerSource collaboration in a given repository by analyzing issues, pull requests, and code contributions. It helps organizations track and improve their InnerSource adoption by quantifying the collaboration between different teams and departments.
 
 ## What is InnerSource?
@@ -358,7 +368,7 @@ Below is an example of the generated InnerSource report:
 
 ## Support
 
-If you need support using this project or have questions about it, please [open up an issue in this repository](https://github.com/github/measure-innersource/issues). Requests made directly to GitHub staff or support team will be redirected here to open an issue. GitHub SLA's and support/services contracts do not apply to this repository.
+If you need support using this project or have questions about it, please [open up an issue in this repository](https://github.com/github-community-projects/measure-innersource/issues). Requests made directly to GitHub staff or support team will be redirected here to open an issue. GitHub SLA's and support/services contracts do not apply to this repository.
 
 ### OSPO GitHub Actions as a Whole
 
@@ -393,7 +403,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v1
         env:
           REPOSITORY: "owner/repo"
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -423,7 +433,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v1
         env:
           REPOSITORY: "owner/repo"
           GH_APP_ID: ${{ secrets.APP_ID }}
@@ -454,7 +464,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v1
         env:
           REPOSITORY: "internal-org/critical-service"
           GH_TOKEN: ${{ secrets.GHE_TOKEN }}
@@ -484,7 +494,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v1
         env:
           REPOSITORY: "bigcorp/massive-monorepo"
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -521,7 +531,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource for ${{ matrix.repository }}
-        uses: github/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v1
         env:
           REPOSITORY: ${{ matrix.repository }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -550,7 +560,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v1
         env:
           REPOSITORY: "org/repository"
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -595,7 +605,7 @@ This action can be configured to authenticate with GitHub App Installation or Pe
 | `RATE_LIMIT_BYPASS` | False    | `false`                 | If set to `true`, the rate limit will be bypassed. This is useful if being run on an local GitHub server with rate limiting disabled.               |
 | `OUTPUT_FILE`       | False    | `innersource_report.md` | Output filename.                                                                                                                                    |
 | `REPORT_TITLE`      | False    | `"InnerSource Report"`  | Title to have on the report issue.                                                                                                                  |
-| `REPOSITORY`        | True     | `""`                    | The name of the repository you are trying to measure. Format `owner/repo` ie. `github/measure-innersource`                                          |
+| `REPOSITORY`        | True     | `""`                    | The name of the repository you are trying to measure. Format `owner/repo` ie. `github-community-projects/measure-innersource`                                          |
 | `CHUNK_SIZE`        | False    | `100`                   | Number of items to process at once when fetching data. Increasing can improve performance but uses more memory. Minimum value is 10.                |
 | `OWNING_TEAM`       | False    | `""`                    | Comma-separated list of GitHub usernames that own the repository. Overrides the built-in team determination algorithm. Example: `alice,bob,charlie` |
 
@@ -826,7 +836,7 @@ The tool automatically splits large files, but you can:
 
 If you continue to experience issues:
 
-1. **Check Existing Issues**: Search the [GitHub Issues](https://github.com/github/measure-innersource/issues) for similar problems
+1. **Check Existing Issues**: Search the [GitHub Issues](https://github.com/github-community-projects/measure-innersource/issues) for similar problems
 2. **Create a New Issue**: Include:
    - Error messages (sanitized of sensitive information)
    - Configuration details (without secrets)

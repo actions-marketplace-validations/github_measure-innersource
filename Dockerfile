@@ -7,9 +7,9 @@ LABEL com.github.actions.name="measure-innersource" \
     com.github.actions.icon="bar-chart" \
     com.github.actions.color="white" \
     maintainer="@zkoppert" \
-    org.opencontainers.image.url="https://github.com/github/measure-innersource" \
-    org.opencontainers.image.source="https://github.com/github/measure-innersource" \
-    org.opencontainers.image.documentation="https://github.com/github/measure-innersource" \
+    org.opencontainers.image.url="https://github.com/github-community-projects/measure-innersource" \
+    org.opencontainers.image.source="https://github.com/github-community-projects/measure-innersource" \
+    org.opencontainers.image.documentation="https://github.com/github-community-projects/measure-innersource" \
     org.opencontainers.image.vendor="GitHub" \
     org.opencontainers.image.description="Measure and report on the InnerSource collaboration occurring in a given repository"
 
