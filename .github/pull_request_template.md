@@ -20,7 +20,3 @@ examples: "feat: add new logger" or "fix: remove unused imports"
 - [ ] If documentation is needed for this change, has that been included in this pull request
 - [ ] run `make lint` and fix any issues that you have introduced
 - [ ] run `make test` and ensure you have test coverage for the lines you are introducing
-
-### Reviewer
-
-- [ ] Label as either `fix`, `documentation`, `enhancement`, `infrastructure`, `maintenance`, or `breaking`
