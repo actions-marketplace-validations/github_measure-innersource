@@ -403,7 +403,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github-community-projects/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v2
         env:
           REPOSITORY: "owner/repo"
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -433,7 +433,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github-community-projects/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v2
         env:
           REPOSITORY: "owner/repo"
           GH_APP_ID: ${{ secrets.APP_ID }}
@@ -464,7 +464,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github-community-projects/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v2
         env:
           REPOSITORY: "internal-org/critical-service"
           GH_TOKEN: ${{ secrets.GHE_TOKEN }}
@@ -494,7 +494,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github-community-projects/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v2
         env:
           REPOSITORY: "bigcorp/massive-monorepo"
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -531,7 +531,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource for ${{ matrix.repository }}
-        uses: github-community-projects/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v2
         env:
           REPOSITORY: ${{ matrix.repository }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -560,7 +560,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Measure InnerSource
-        uses: github-community-projects/measure-innersource@v1
+        uses: github-community-projects/measure-innersource@v2
         env:
           REPOSITORY: "org/repository"
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
