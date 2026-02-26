@@ -32,7 +32,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           START_DATE: ${{ env.START_DATE }}
           END_DATE: ${{ env.END_DATE }}
-          REPOSITORY: github/measure-innersource
+          REPOSITORY: github-community-projects/measure-innersource
           SPONSOR_INFO: "true"
 
       - name: Create issue
