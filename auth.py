@@ -86,7 +86,7 @@ def auth_to_github(
         else:
             gh = github3.github.GitHub()
         gh.login_as_app_installation(
-            gh_app_private_key_bytes, gh_app_id, gh_app_installation_id
+            gh_app_private_key_bytes, str(gh_app_id), gh_app_installation_id
         )
         github_connection = gh
     elif ghe and token:
@@ -95,8 +95,8 @@ def auth_to_github(
         github_connection = github3.login(token=token)
     else:
         raise ValueError(
-            "GH_TOKEN or the set of [GH_APP_ID, GH_APP_INSTALLATION_ID, \
-                GH_APP_PRIVATE_KEY] environment variables are not set"
+            "GH_TOKEN or the set of [GH_APP_ID, GH_APP_INSTALLATION_ID, "
+            "GH_APP_PRIVATE_KEY] environment variables are not set"
         )
 
     if not github_connection:

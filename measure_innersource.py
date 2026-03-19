@@ -1,7 +1,7 @@
 """A tool for measuring InnerSource collaboration in a given repository
 
 This script uses the GitHub API to search for issues/prs in a repository
-and measure the InnerSource collaboration occuring in those issues/prs.
+and measure the InnerSource collaboration occurring in those issues/prs.
 The results are then written to a markdown file.
 
 """

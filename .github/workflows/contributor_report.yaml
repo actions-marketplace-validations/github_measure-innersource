@@ -5,14 +5,21 @@ on:
     - cron: "3 2 1 * *"
 
 permissions:
-  issues: write
+  contents: read
 
 jobs:
   contributor_report:
     name: contributor report
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
 
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Get dates for last month
         shell: bash
         run: |
@@ -27,12 +34,12 @@ jobs:
           echo "END_DATE=$end_date" >> "$GITHUB_ENV"
 
       - name: Run contributor action
-        uses: github/contributors@0d5adc3833e89ee1f4145744f5d69313cf5ea238 # v1.7.8
+        uses: github-community-projects/contributors@0d5adc3833e89ee1f4145744f5d69313cf5ea238 # v1.7.8
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           START_DATE: ${{ env.START_DATE }}
           END_DATE: ${{ env.END_DATE }}
-          REPOSITORY: github/measure-innersource
+          REPOSITORY: github-community-projects/measure-innersource
           SPONSOR_INFO: "true"
 
       - name: Create issue
